@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace aula.Models
+{
+    public class Funcionario
+    {
+        public long FuncionarioId { get; set; }
+        public string Nome { get; set; }
+    }
+}
