@@ -12,5 +12,6 @@ namespace aula.App_Start.Models
         public EFContext() : base("Asp_Net_MVC_CS") { }
         public DbSet<Serviço> Serviços { get; set; }
         public DbSet<Funcionario> Funcionarios { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }
