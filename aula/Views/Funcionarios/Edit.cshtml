@@ -26,6 +26,24 @@
                         @Html.ValidationMessageFor(model => model.Nome, "",
                         new { @class = "text-danger" })
                     </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Email, new
+                        {
+                            htmlAttributes =
+                        new { @class = "form-control" }
+                        })
+                        @Html.ValidationMessageFor(model => model.Email, "",
+                        new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Telefone, new
+                        {
+                            htmlAttributes =
+                        new { @class = "form-control" }
+                        })
+                        @Html.ValidationMessageFor(model => model.Telefone, "",
+                        new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
             <div class="panel-footer panel-info">

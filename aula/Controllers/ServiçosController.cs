@@ -19,7 +19,7 @@ namespace aula.Controllers
         {
             return View(
                 //serviços
-                context.Serviços.OrderBy(c => c.Nome)
+                context.Serviços.OrderBy(c => c.Descrição)
                 );
         }
 
