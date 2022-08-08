@@ -14,12 +14,12 @@ namespace aula.Controllers
     {
         private EFContext context = new EFContext();
 
-        // GET: Serviços
+        // GET: Serviços ADWA
         public ActionResult Index()
         {
             return View(
-                //serviços
-                context.Serviços.OrderBy(c => c.Nome)
+                //serviços HAHAHAH HOHOHOHOHOa aaaaaaaaa
+                context.Serviços.OrderBy(c => c.Descrição)
                 );
         }
 

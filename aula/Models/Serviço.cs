@@ -8,6 +8,6 @@ namespace aula.Models
     public class Serviço
     {
         public long ServiçoId { get; set; }
-        public string Nome { get; set; }
+        public string Descrição { get; set; }
     }
 }
