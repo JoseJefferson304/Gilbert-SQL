@@ -9,5 +9,7 @@ namespace aula.Models
     {
         public long ClienteId{ get; set; }
         public string Nome{ get; set; }
+
+        public virtual ICollection<Agendamento> Agendamentos { get; set; }
     }
 }

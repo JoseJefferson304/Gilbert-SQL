@@ -1,0 +1,79 @@
+﻿@model aula.Models.Agendamento
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registrando um NOVO AGENDAMENTO";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Registro de um NOVO AGENDAMENTO
+        </div>
+        <div class="panel-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Data, htmlAttributes:
+                    new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Data, new
+                        {
+                            htmlAttributes =
+                        new { @class = "form-control" }
+                        })
+                        @Html.ValidationMessageFor(model => model.Data, "",
+                        new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ClienteId, "ClienteId", htmlAttributes:
+                    new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("ClienteId", null, htmlAttributes:
+                        new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ClienteId, "",
+                        new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ServiçoId, "ServiçoId", htmlAttributes:
+                    new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("ServiçoId", null, htmlAttributes:
+                        new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ServiçoId, "",
+                        new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FuncionarioId, "FuncionarioId", htmlAttributes:
+                    new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("FuncionarioId", null, htmlAttributes:
+                        new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.FuncionarioId, "",
+                        new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer panel-info">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Adicionar Agendamento" class="btn btn-danger" />
+                    @Html.ActionLink("Retornar para a listagem de AGENDAMENTOS", "Index", null,
+                    new { @class = "btn btn-warning" })
+                </div>
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+}
+@section ScriptPage {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liAgendamentos').addClass("active");
+        });
+    </script>
+}

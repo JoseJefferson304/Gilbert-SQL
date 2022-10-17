@@ -84,8 +84,8 @@ namespace aula.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Funcionario funcionario = context.Funcionarios.Find(id);
-            //Funcionario funcionario = funcionarios.Where(m => m.FuncionarioId == id).First();
+            Funcionario funcionario = context.Funcionarios.Where(f => f.FuncionarioId == id).
+            Include("Agendamentos.Cliente").First();
             if (funcionario == null)
             {
                 return HttpNotFound();

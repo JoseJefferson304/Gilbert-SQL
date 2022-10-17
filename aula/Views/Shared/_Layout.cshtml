@@ -6,19 +6,142 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet" />
     @RenderSection("styles", false)
+    <style>
+        .row{
+            margin-top: 45px;
+        }
+        body {
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+        }
+        li {
+            list-style: none;
+        }
+        ol {
+            padding: 0;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 35px;
+            font-family: 'Khula', sans-serif;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+        }
+        * {
+            margin: 0;
+        }
+
+        header {
+            background-color: black;
+        }
+        header a{
+            color: white;
+        }
+
+        .container-img {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .perfil-icon {
+            margin-top: 2%;
+            margin-left: 15%;
+        }
+
+        .logo-icon {
+            margin-right: 25%;
+        }
+
+        .login-cadastro {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lista {
+            border-right: 2px white solid;
+            padding-right: 5px;
+        }
+
+        .lista-item-img {
+            display: inline-block;
+        }
+
+        .borda {
+            border-bottom: 2px solid white;
+            margin-bottom: 5px;
+        }
+
+        .container-cabecalho {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .lista-item-cabecalho {
+            border-bottom: 2px solid white;
+            color: white;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .cabecalho {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0px 20%;
+        }
+
+        .lista-botao {
+            background-color: #C6343F;
+            padding: 0 20px;
+            height: 30px;
+            color: white;
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: 400;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="page-header bg-danger">
-                <h1>
-                    Desenvolvimento em ASP.NET MVC
-                    <small class="text-danger">
-                        Utilizando o Bootstrap
-                    </small>
-                </h1>
+
+    <header>
+        <div class="container-img">
+            <div class="perfil-icon">
+                <ol class="login-cadastro">
+                    <img src="../assets/perfil.png" alt="" width="15%">
+                    <li><a href=""><p class="lista">Login</p></a></li>
+                    <li><a href=""><p class="cadastro">Cadastro</p></a></li>
+                </ol>
             </div>
+            <div class="logo-icon">
+                <a> <img src="assets/logo.png" alt="" width="50%"></a>
+            </div>
+            <div></div>
         </div>
+        <p class="borda"></p>
+        <nav class="container-cabecalho">
+            <ol class="cabecalho">
+                <a>
+                <li class="lista-item-cabecalho">Meu perfil</li></a>
+                <a>
+                <li class="lista-item-cabecalho">Serviços</li></a>
+                <a>
+                <li class="lista-item-cabecalho">Sobre</li></a>
+                <a>
+                <li class="lista-item-cabecalho">Contato</li></a>
+                <a><button class="lista-botao">Agendar agora</button></a>
+            </ol>
+        </nav>
+    </header>
         <div class="row">
             <div class="col-xs-3 col-md-3 bg-success">
                 <ul class="nav nav-pills nav-stacked">
@@ -33,6 +156,9 @@
                     <li role="presentation">
                         @Html.ActionLink("Clientes", "Index", "Clientes")
                     </li>
+                    <li role="presentation">
+                        @Html.ActionLink("Agendamentos", "Index", "Agendamentos")
+                    </li>
                 </ul>
             </div>
             <div class="col-xs-9 col-md-9">
@@ -40,12 +166,6 @@
                 @RenderBody()
             </div>
         </div> <br />
-        <div class="row">
-            <div class="col-xs-12 col-md-12 bg-danger">
-                <small>Layout com Bootstrap</small>
-            </div>
-        </div>
-    </div>
     <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
     <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
     @RenderSection("ScriptPage", false);
