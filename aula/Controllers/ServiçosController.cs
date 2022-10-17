@@ -18,7 +18,7 @@ namespace aula.Controllers
         public ActionResult Index()
         {
             return View(
-                //serviços HAHAHAH HOHOHOHOHOa aaaaaaaaa
+                //serviços 
                 context.Serviços.OrderBy(c => c.Descrição)
                 );
         }

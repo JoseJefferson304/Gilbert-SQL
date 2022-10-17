@@ -22,7 +22,7 @@ namespace aula.Controllers
                 context.Clientes.OrderBy(c => c.Nome)
                 );
         }
-
+        
         // GET: Create
         [HttpGet]
         public ActionResult Create()
