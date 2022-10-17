@@ -7,7 +7,7 @@ namespace aula.Models
 {
     public class Agendamento
     {
-        public long? AgendamentoId { get; set; }
+        public long AgendamentoId { get; set; }
         public string Data{ get; set; }
         public long? ClienteId { get; set; }
         public long? ServiçoId { get; set; }

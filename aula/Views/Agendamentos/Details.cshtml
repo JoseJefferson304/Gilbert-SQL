@@ -10,13 +10,55 @@
     </div>
     <div class="panel-body">
         <div class="form-group">
-            @Html.LabelFor(model => model.Nome)
+            @Html.LabelFor(model => model.Data)
             <br />
             <div class="input-group">
                 <span class="input-group-addon">
                     <i class="glyphicon glyphicon-user"></i>
                 </span>
-                @Html.EditorFor(model => model.Nome, new
+                @Html.EditorFor(model => model.Data, new
+                {
+                    htmlAttributes =
+                new { @class = "form-control", disabled = "disabled" }
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cliente)
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-user"></i>
+                </span>
+                @Html.EditorFor(model => model.Cliente.Nome, new
+                {
+                    htmlAttributes =
+                new { @class = "form-control", disabled = "disabled" }
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Serviço)
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-user"></i>
+                </span>
+                @Html.EditorFor(model => model.Serviço.Descrição, new
+                {
+                    htmlAttributes =
+                new { @class = "form-control", disabled = "disabled" }
+                })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Funcionario)
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-user"></i>
+                </span>
+                @Html.EditorFor(model => model.Funcionario.Nome, new
                 {
                     htmlAttributes =
                 new { @class = "form-control", disabled = "disabled" }
@@ -25,7 +67,7 @@
         </div>
     </div>
     <div class="panel-footer panel-info">
-        @Html.ActionLink("Alterar", "Edit", new { id = Model.Agendamento },
+        @Html.ActionLink("Alterar", "Edit", new { id = Model.Data },
         new { @class = "btn btn-info" })
         @Html.ActionLink("Retornar para a listagem", "Index", null,
         new { @class = "btn btn-info" })
