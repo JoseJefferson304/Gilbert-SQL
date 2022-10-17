@@ -246,10 +246,7 @@
   <ItemGroup>
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\AgendamentosController.cs" />
-=======
->>>>>>> 28e7fd1c2c60e0d80591f368f6afff63f47dc65b
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\ServiçosController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
@@ -282,7 +279,6 @@
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Delete.cshtml" />
     <Content Include="Views\Clientes\Details.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Agendamentos\Index.cshtml" />
     <Content Include="Views\Agendamentos\Create.cshtml" />
     <Content Include="Views\Agendamentos\Delete.cshtml" />
@@ -291,8 +287,6 @@
     <Content Include="Views\Agendamentos\_PorFuncionario.cshtml" />
     <Content Include="Views\Agendamentos\_PorServiço.cshtml" />
     <Content Include="Views\Agendamentos\_PorCliente.cshtml" />
-=======
->>>>>>> 28e7fd1c2c60e0d80591f368f6afff63f47dc65b
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
