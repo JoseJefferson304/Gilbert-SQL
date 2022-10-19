@@ -18,11 +18,6 @@ namespace aula.Controllers
         public ActionResult Index()
         {
             return View(
-<<<<<<< HEAD
-                //serviços 
-=======
-                //serviços HAHAHAH HOHOHOHOHOa aaaaaaaaa uuuuuuuuuuu
->>>>>>> 28e7fd1c2c60e0d80591f368f6afff63f47dc65b
                 context.Serviços.OrderBy(c => c.Descrição)
                 );
         }
