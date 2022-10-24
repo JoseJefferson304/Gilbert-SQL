@@ -10,6 +10,9 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Data)
                     </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Funcionario.Nome)
+                    </th>
                     <th>Funcionario</th>
                 </tr>
             </thead>
@@ -18,13 +21,7 @@
                 {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AgendamentoId)
-                    </td>
-                    <td>
                         @Html.DisplayFor(modelItem => item.Data)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Serviço.Descrição)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Funcionario.Nome)
