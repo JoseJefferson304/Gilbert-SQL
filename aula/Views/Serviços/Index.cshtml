@@ -24,19 +24,19 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Descrição)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Valor)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Alterar", "Edit", new { id = item.ServiçoId }) |
-                        @Html.ActionLink("Detalhes", "Details", new { id = item.ServiçoId }) |
-                        @Html.ActionLink("Eliminar", "Delete", new { id = item.ServiçoId })
-                    </td>
-                </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descrição)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Alterar", "Edit", new { id = item.ServiçoId }) |
+                            @Html.ActionLink("Detalhes", "Details", new { id = item.ServiçoId }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = item.ServiçoId })
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>

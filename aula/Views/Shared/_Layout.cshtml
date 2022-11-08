@@ -5,111 +5,10 @@
           charset="utf-8" />
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet" />
+    <link href="../../../css/header.css" rel="stylesheet" />
+    <link href="../../../css/footer.css" rel="stylesheet" />
+    <link href="../../../css/global.css" rel="stylesheet" />
     @RenderSection("styles", false)
-    <style>
-        .row{
-            margin-top: 45px;
-        }
-        body {
-            margin: 0 auto;
-        }
-
-        a {
-            text-decoration: none;
-            list-style: none;
-        }
-        li {
-            list-style: none;
-        }
-        ol {
-            padding: 0;
-        }
-
-        p {
-            font-weight: 500;
-            font-size: 35px;
-            font-family: 'Khula', sans-serif;
-        }
-
-        h1 {
-            font-weight: 700;
-            font-size: 60px;
-        }
-        * {
-            margin: 0;
-        }
-
-        header {
-            background-color: black;
-        }
-        header a{
-            color: white;
-        }
-
-        .container-img {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .perfil-icon {
-            margin-top: 2%;
-            margin-left: 15%;
-        }
-
-        .logo-icon {
-            margin-right: 25%;
-        }
-
-        .login-cadastro {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .lista {
-            border-right: 2px white solid;
-            padding-right: 5px;
-        }
-
-        .lista-item-img {
-            display: inline-block;
-        }
-
-        .borda {
-            border-bottom: 2px solid white;
-            margin-bottom: 5px;
-        }
-
-        .container-cabecalho {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .lista-item-cabecalho {
-            border-bottom: 2px solid white;
-            color: white;
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .cabecalho {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            margin: 0px 20%;
-        }
-
-        .lista-botao {
-            background-color: #C6343F;
-            padding: 0 20px;
-            height: 30px;
-            color: white;
-            font-family: 'Fira Sans', sans-serif;
-            font-weight: 400;
-            border-radius: 20px;
-            margin-top: 5px;
-        }
-    </style>
 </head>
 <body>
 
@@ -130,45 +29,60 @@
         <p class="borda"></p>
         <nav class="container-cabecalho">
             <ol class="cabecalho">
-                <a>
-                <li class="lista-item-cabecalho">Meu perfil</li></a>
-                <a>
-                <li class="lista-item-cabecalho">Serviços</li></a>
-                <a>
-                <li class="lista-item-cabecalho">Sobre</li></a>
-                <a>
-                <li class="lista-item-cabecalho">Contato</li></a>
-                <a><button class="lista-botao">Agendar agora</button></a>
+                <li class="lista-item-cabecalho">
+                    @Html.ActionLink("Homes", "Index", "Homes")
+                </li>
+                <li class="lista-item-cabecalho">
+                    @Html.ActionLink("Serviços", "Index", "Serviços")
+                </li>
+                <li class="lista-item-cabecalho">
+                    @Html.ActionLink("Funcionarios", "Index", "Funcionarios")
+                </li>
+                <li class="lista-item-cabecalho">
+                    @Html.ActionLink("Clientes", "Index", "Clientes")
+                </li>
+                <li class="lista-item-cabecalho">
+                    @Html.ActionLink("Agendamentos", "Index", "Agendamentos")
+                </li>
             </ol>
         </nav>
     </header>
-        <div class="row">
-            <div class="col-xs-3 col-md-3 bg-success">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-
-                    <li role="presentation">
-                        @Html.ActionLink("Serviços", "Index", "Serviços")
-                    </li>
-                    <li role="presentation">
-                        @Html.ActionLink("Funcionarios", "Index", "Funcionarios")
-                    </li>
-                    <li role="presentation">
-                        @Html.ActionLink("Clientes", "Index", "Clientes")
-                    </li>
-                    <li role="presentation">
-                        @Html.ActionLink("Agendamentos", "Index", "Agendamentos")
-
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xs-9 col-md-9">
-                <br />
-                @RenderBody()
-            </div>
-        </div> <br />
+    
+            @RenderBody()
     <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
     <script src="@Url.Content("~/scripts/bootstrap.js")"></script>
     @RenderSection("ScriptPage", false);
+    <footer>
+        <div class="container-footer">
+            <div class="container-logo">
+                <img src="../assets/logo.png" alt="" width="50%">
+                <p class="barbearia-texto">Barbearia <br> do Matheus</p>
+                <p class="barbearia-span">©2022 - Barbearia do <br>Matheus</p>
+            </div>
+            <div class="container-lista-footer">
+                <ul>
+                    <li>Meu perfil </li>
+                    <li>Sobre</li>
+                    <li>Serviços</li>
+                    <li>Contato</li>
+                    <li>Agendar Agora</li>
+                </ul>
+            </div>
+            <div class="container-lista-horario">
+                <ol>
+                    <li><p>Horários:</p></li>
+                    <li><p>Ter à Sáb das 9:00 às 19:30</p></li>
+                    <li><p>Dom das 9:00 às 12:00</p></li>
+                </ol>
+            </div>
+            <div class="container-lista-redes">
+                <ol>
+                    <li><img src='../assets/facebook.svg'></li>
+                    <li><img src='../assets/instagram.svg'></li>
+                    <li><img src='../assets/watsapp.svg'></li>
+                </ol>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

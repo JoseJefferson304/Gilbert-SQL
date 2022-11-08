@@ -205,6 +205,10 @@
     <Content Include="Content\DataTables-1.10.2\images\xls_hover.png" />
     <Content Include="Content\DataTables-1.10.2\swf\copy_csv_xls.swf" />
     <Content Include="Content\DataTables-1.10.2\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="css\footer.css" />
+    <Content Include="css\global.css" />
+    <Content Include="css\header.css" />
+    <Content Include="css\home.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -257,6 +261,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgendamentosController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\HomesController.cs" />
     <Compile Include="Controllers\ServiçosController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -296,6 +301,7 @@
     <Content Include="Views\Agendamentos\_PorFuncionario.cshtml" />
     <Content Include="Views\Agendamentos\_PorServiço.cshtml" />
     <Content Include="Views\Agendamentos\_PorCliente.cshtml" />
+    <Content Include="Views\Homes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

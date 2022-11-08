@@ -1,0 +1,81 @@
+﻿
+
+* {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+}
+
+
+.container-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil-icon {
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+.logo-icon {
+    margin-right: 25%;
+}
+
+.login-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.lista {
+    border-right: 2px white solid;
+    padding-right: 5px;
+}
+
+.lista-item-img {
+    display: inline-block;
+}
+
+.borda {
+    border-bottom: 2px solid white;
+    margin-bottom: 5px;
+}
+
+.container-cabecalho {
+    display: flex;
+    justify-content: space-around;
+}
+
+.lista-item-cabecalho {
+    border-bottom: 2px solid white;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+}
+.lista-item-cabecalho a {
+    color: white;   
+}
+.lista, .cadastro{
+    color: white;
+}
+
+.cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 20%;
+}
+
+.lista-botao {
+    background-color: #c6343f;
+    padding: 0 20px;
+    height: 30px;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    border-radius: 20px;
+    margin-top: 5px;
+}
