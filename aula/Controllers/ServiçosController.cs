@@ -62,18 +62,50 @@ namespace aula.Controllers
         // POST: Serviços/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Serviço serviço)
+
+        private byte[] SetLogotipo(HttpPostedFileBase logotipo)
         {
-            if (ModelState.IsValid)
-            {
-                context.Entry(serviço).State = EntityState.Modified;
-                context.SaveChanges();
-                //serviços.Remove(
-                //serviços.Where(c => c.ServiçoId == serviço.ServiçoId).First());
-                //serviços.Add(serviço);
-                return RedirectToAction("Index");
+            var bytesLogotipo = new byte[logotipo.ContentLength];
+            logotipo.InputStream.Read(bytesLogotipo, 0, logotipo.ContentLength);
+            return bytesLogotipo;
+        }
+ 
+        public ActionResult Edit(Serviço serviço , HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
+        {
+            try { 
+                if (ModelState.IsValid)
+                {
+                    if (chkRemoverImagem != null)
+                    {
+                        serviço.Logotipo = null;
+                    }
+                    if (logotipo != null)
+                    {
+                        serviço.LogotipoMimeType = logotipo.ContentType;
+                        serviço.Logotipo = SetLogotipo(logotipo);
+                    }
+                    context.Entry(serviço).State = EntityState.Modified;
+                    context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                ViewBag(serviço);
+                return View(serviço);
             }
-            return View(serviço);
+            catch
+            {
+                ViewBag(serviço);
+                return View(serviço);
+            }
+        }
+
+        public FileContentResult GetLogotipo(long id)
+        {
+            Serviço serviço = context.Serviços.Find(id);
+            if (serviço != null)
+            {
+                return File(serviço.Logotipo, serviço.LogotipoMimeType);
+            }
+            return null;
         }
 
         // GET: Serviços/Details/5
