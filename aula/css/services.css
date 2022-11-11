@@ -1,0 +1,46 @@
+﻿
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #2d2d2d;
+    border-radius: 20px;
+}
+
+.corte {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.nome-preco {
+    padding-left: 3%;
+}
+
+main {
+    background-color: #d9d9d9;
+    max-width: fit-content;
+    padding: 2%;
+    margin: 0 auto;
+}
+
+
+.agendar {
+    background-color: #c6343f;
+    color: #fff;
+    border-radius: 58px;
+    border-style: none;
+    cursor: pointer;
+    margin-left: 128%;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.container-servicos {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

@@ -209,6 +209,7 @@
     <Content Include="css\global.css" />
     <Content Include="css\header.css" />
     <Content Include="css\home.css" />
+    <Content Include="css\services.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -260,6 +261,7 @@
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AgendamentosController.cs" />
+    <Compile Include="Controllers\AgendesController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomesController.cs" />
     <Compile Include="Controllers\ServiçosController.cs" />
@@ -302,6 +304,7 @@
     <Content Include="Views\Agendamentos\_PorServiço.cshtml" />
     <Content Include="Views\Agendamentos\_PorCliente.cshtml" />
     <Content Include="Views\Homes\Index.cshtml" />
+    <Content Include="Views\Agendes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
