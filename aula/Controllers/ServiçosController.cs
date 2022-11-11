@@ -34,7 +34,6 @@ namespace aula.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Serviço serviço)
         {
-            //serviço.ServiçoId = serviços.Select(m => m.ServiçoId).Max() + 1;
             context.Serviços.Add(serviço);
             context.SaveChanges();
             return RedirectToAction("Index");
@@ -48,7 +47,6 @@ namespace aula.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //Serviço serviço = serviços.Where(m => m.ServiçoId == id).First();
 
             Serviço serviço = context.Serviços.Find(id);
 
@@ -69,10 +67,10 @@ namespace aula.Controllers
             logotipo.InputStream.Read(bytesLogotipo, 0, logotipo.ContentLength);
             return bytesLogotipo;
         }
- 
-        public ActionResult Edit(Serviço serviço , HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
+        private ActionResult GravarServiço(Serviço serviço, HttpPostedFileBase logotipo, string chkRemoverImagem)
         {
-            try { 
+            try
+            {
                 if (ModelState.IsValid)
                 {
                     if (chkRemoverImagem != null)
@@ -88,14 +86,17 @@ namespace aula.Controllers
                     context.SaveChanges();
                     return RedirectToAction("Index");
                 }
-                ViewBag(serviço);
                 return View(serviço);
             }
             catch
             {
-                ViewBag(serviço);
                 return View(serviço);
             }
+        }
+        [HttpPost]
+        public ActionResult Edit(Serviço serviço, HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
+        {
+            return GravarServiço(serviço, logotipo, chkRemoverImagem);
         }
 
         public FileContentResult GetLogotipo(long id)
