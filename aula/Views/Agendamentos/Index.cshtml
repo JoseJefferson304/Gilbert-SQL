@@ -21,6 +21,7 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Data)
                     </th>
+                    <th>Horário</th>
                     <th>Cliente</th>
                     <th>Serviços</th>
                     <th>Funcionario</th>
@@ -32,6 +33,9 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Data)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Horario)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Cliente.Nome)
