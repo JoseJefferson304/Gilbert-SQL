@@ -32,7 +32,7 @@ namespace aula.Controllers
         // POST: Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Serviço serviço)
+        public ActionResult Create(Serviço serviço, HttpPostedFileBase logotipo = null)
         {
             context.Serviços.Add(serviço);
             context.SaveChanges();
