@@ -1,5 +1,4 @@
-﻿
-@model aula.Models.Serviço
+﻿@model aula.Models.Serviço
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,55 +7,39 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            Registro de um NOVO SERVIÇO
-        </div>
-        <div class="panel-body">
-            <div class="form-horizontal">
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Descrição, htmlAttributes: new
-                    {
-                    @class = "control-label col-md-2"
-                    })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Descrição, new
-                        {
-                            htmlAttributes =
-                        new { @class = "form-control" }
-                        })
-                        @Html.ValidationMessageFor(model => model.Descrição, "",
-                        new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Valor, htmlAttributes: new
-                    {
-                    @class = "control-label col-md-2"
-                    })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Valor, new
-                        {
-                            htmlAttributes =
-                        new { @class = "form-control" }
-                        })
-                        @Html.ValidationMessageFor(model => model.Valor, "",
-                        new { @class = "text-danger" })
-                    </div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Registro de um NOVO SERVIÇO
+    </div>
+    <div class="panel-body">
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Descrição, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Descrição, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Descrição, "", new { @class = "text-danger" })
                 </div>
             </div>
-        </div>
-        <div class="panel-footer panel-info">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Adicionar Serviço" class="btn btn-danger" />
-                @Html.ActionLink("Retornar para a listagem de SERVIÇOS", "Index", null,
-                new { @class = "btn btn-warning" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+                </div>
             </div>
-            <br />
-            <br />
         </div>
     </div>
+
+    <div class="panel-footer panel-info">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Adicionar Serviço" class="btn btn-danger" />
+            @Html.ActionLink("Retornar para a listagem de SERVIÇOS", "Index", null, new { @class = "btn btn-warning" })
+        </div>
+        <br />
+        <br />
+    </div>
+</div>
 }
 @section ScriptPage {
     <script src="~/Scripts/jquery.validate.min.js">

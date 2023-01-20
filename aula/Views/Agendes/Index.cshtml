@@ -1,4 +1,5 @@
-﻿@{
+﻿@model aula.Models.Agendamento
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     <link href="../../../css/services.css" rel="stylesheet" />
 }
@@ -11,93 +12,72 @@
 
         <div class="card">
             <div class="corte">
-                <img src="../assets/foto.png" alt="" width="15%" />
+                <img src="../assets/topetinho.png" alt="degradê na 0" width="50%" />
                 <div>
 
                     <div class="nome-preco">
-                        <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                        <h4>R$0,00</h4>
+                        <h4>DEGRADÊ NA ZERO </h4>
+                        <h4>R$20,00</h4>
                     </div>
 
-                    <button class="agendar">AGENDAR</button>
+                    <div class="btn-agendar">
+                        <button class="agendar">
+                            @Html.ActionLink("Agendar", "Create", "Agendamentos")
+                        </button>
+                    </div>
 
                 </div>
             </div>
         </div>
 
         <div class="card">
-          <div class="corte">
-            <img src="../assets/foto-0.png" alt="" width="10%" />
-            <div>
-              <div class="nome-preco">
-                <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                <h4>R$0,00</h4>
-              </div>
-              <div class="btn-agendar">
-                <button class="agendar">AGENDAR</button>
-              </div>
+            <div class="corte">
+                <img src="../assets/adolescente.png" alt="degradê navalhado" width="50%" />
+                <div>
+                    <div class="nome-preco">
+                        <h4>DEGRADÊ NAVALHADO</h4>
+                        <h4>R$15,00</h4>
+                    </div>
+                    <div class="btn-agendar">
+                        <button class="agendar">
+                            @Html.ActionLink("Agendar", "Create", "Agendamentos")
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <div class="card">
-          <div class="corte">
-            <img src="../assets/foto-1.png" alt="" width="10%" />
-            <div>
-              <div class="nome-preco">
-                <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                <h4>R$0,00</h4>
-              </div>
-              <div class="btn-agendar">
-                <button class="agendar">AGENDAR</button>
-              </div>
+            <div class="corte">
+                <img src="../assets/homem.png" alt="taper fade" width="50%" />
+                <div>
+                    <div class="nome-preco">
+                        <h4>TAPER FADE</h4>
+                        <h4>R$20,00</h4>
+                    </div>
+                    <div class="btn-agendar">
+                        <button class="agendar">
+                            @Html.ActionLink("Agendar", "Create", "Agendamentos")
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <div class="card">
-          <div class="corte">
-            <img src="../assets/foto-2.png" alt="" width="10%" />
-            <div>
-              <div class="nome-preco">
-                <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                <h4>R$0,00</h4>
-              </div>
-              <div class="btn-agendar">
-                <button class="agendar">AGENDAR</button>
-              </div>
+            <div class="corte">
+                <img src="../assets/corte social infantil 1.png" alt="corte social infantil" width="50%" />
+                <div>
+                    <div class="nome-preco">
+                        <h4>SOCIAL INFANTIL</h4>
+                        <h4>R$10,00</h4>
+                    </div>
+                    <div class="btn-agendar">
+                        <button class="agendar">
+                            @Html.ActionLink("Agendar", "Create", "Agendamentos")
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="card">
-          <div class="corte">
-            <img src="../assets/foto-3.png" alt="" width="10%" />
-            <div>
-              <div class="nome-preco">
-                <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                <h4>R$0,00</h4>
-              </div>
-              <div class="btn-agendar">
-                <button class="agendar">AGENDAR</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="corte">
-            <img src="../assets/foto-4.png" alt="" width="10%" />
-            <div>
-              <div class="nome-preco">
-                <h4>DEGRADÊ NA ZERO COM FREESTYLE</h4>
-                <h4>R$0,00</h4>
-              </div>
-              <div class="btn-agendar">
-                <button class="agendar">AGENDAR</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    </div>
-    </div>
 
 
 </main>

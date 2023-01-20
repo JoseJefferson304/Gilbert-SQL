@@ -39,6 +39,16 @@ namespace aula.Controllers
             return RedirectToAction("Index");
         }
 
+        public FileContentResult GetLogotipo2(long id)
+        {
+            Serviço serviço = context.Serviços.Find(id);
+            if (serviço != null)
+            {
+                return File(serviço.Logotipo, serviço.LogotipoMimeType);
+            }
+            return null;
+        }
+
         // GET: Serviços/Edit/5
         [HttpGet]
         public ActionResult Edit(long? id)
