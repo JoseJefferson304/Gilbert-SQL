@@ -62,9 +62,43 @@ namespace aula.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                agendamento.Horario = "08:00";
                 context.Agendamentos.Add(agendamento);
                 context.SaveChanges();
+                agendamento.Horario = "08:30";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "09:00";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "09:30";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "10:00";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "10:30";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "11:00";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "11:30";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "12:00";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+                agendamento.Horario = "14:00";
+                context.Agendamentos.Add(agendamento);
+                agendamento.Horario = "14:30";
+                context.Agendamentos.Add(agendamento);
+                context.SaveChanges();
+
+                context.SaveChanges();
+
+
+
                 return RedirectToAction("Index");
             }
             catch
